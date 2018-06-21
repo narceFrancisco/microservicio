@@ -70,9 +70,4 @@ public class ClientGreetingServer {
 	public ClientGreetingController helloWorldController() {
 		return new ClientGreetingController(helloWorldService());
 	}
-
-	@Bean
-	public ClientGreetingHomeController homeController() {
-		return new ClientGreetingHomeController();
-	}
 }
