@@ -56,7 +56,7 @@ public class ClientGreetingController {
 	@RequestMapping("/greetingFuture/{name}")
 	public String greetingFuture(Model model, @PathVariable("name") String name) throws InterruptedException, ExecutionException {
 	
-		logger.info("greetingFuture() invoked: " + name);
+		logger.info(new StringBuilder("greetingFuture() invoked: " ).append(name).toString());
 				
 		Future<Greeting> greeting = helloWorldService.greetingFuture(name);
 		
